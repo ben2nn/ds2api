@@ -1,4 +1,4 @@
-package claude
+﻿package claude
 
 import (
 	"context"
@@ -71,7 +71,7 @@ func TestClaudeDirectAppliesCurrentInputFile(t *testing.T) {
 	if len(ds.uploads) != 1 {
 		t.Fatalf("expected one current input upload, got %d", len(ds.uploads))
 	}
-	if ds.uploads[0].Filename != "DS2API_HISTORY.txt" {
+	if ds.uploads[0].Filename != "HRIDS_HISTORY.txt" {
 		t.Fatalf("unexpected upload filename: %q", ds.uploads[0].Filename)
 	}
 	refIDs, _ := ds.payload["ref_file_ids"].([]any)
@@ -79,7 +79,7 @@ func TestClaudeDirectAppliesCurrentInputFile(t *testing.T) {
 		t.Fatalf("expected uploaded history ref id, got %#v", ds.payload["ref_file_ids"])
 	}
 	prompt, _ := ds.payload["prompt"].(string)
-	if !strings.Contains(prompt, "Continue from the latest state in the attached DS2API_HISTORY.txt context.") {
+	if !strings.Contains(prompt, "Continue from the latest state in the attached HRIDS_HISTORY.txt context.") {
 		t.Fatalf("expected continuation prompt, got %q", prompt)
 	}
 }

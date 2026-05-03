@@ -1,4 +1,4 @@
-package chat
+﻿package chat
 
 import (
 	"encoding/json"
@@ -129,7 +129,7 @@ func TestHandleVercelStreamPrepareAppliesCurrentInputFile(t *testing.T) {
 		t.Fatalf("expected payload object, got %#v", body["payload"])
 	}
 	promptText, _ := payload["prompt"].(string)
-	if !strings.Contains(promptText, "Continue from the latest state in the attached DS2API_HISTORY.txt context.") {
+	if !strings.Contains(promptText, "Continue from the latest state in the attached HRIDS_HISTORY.txt context.") {
 		t.Fatalf("expected continuation prompt, got %s", promptText)
 	}
 	if strings.Contains(promptText, "first user turn") || strings.Contains(promptText, "latest user turn") {

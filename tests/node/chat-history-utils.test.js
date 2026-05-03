@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
@@ -15,7 +15,7 @@ test('chat history strict parser merges current input file placeholder', async (
   const item = {
     messages: [{
       role: 'user',
-      content: 'Continue from the latest state in the attached DS2API_HISTORY.txt context. Treat it as the current working state and answer the latest user request directly.',
+      content: 'Continue from the latest state in the attached HRIDS_HISTORY.txt context. Treat it as the current working state and answer the latest user request directly.',
     }],
     history_text: [
       '<｜begin▁of▁sentence｜>',

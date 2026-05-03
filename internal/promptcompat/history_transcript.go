@@ -1,13 +1,13 @@
-package promptcompat
+﻿package promptcompat
 
 import (
 	"fmt"
 	"strings"
 )
 
-const CurrentInputContextFilename = "DS2API_HISTORY.txt"
+const CurrentInputContextFilename = "HRIDS_HISTORY.txt"
 
-const historyTranscriptTitle = "# DS2API_HISTORY.txt"
+const historyTranscriptTitle = "# HRIDS_HISTORY.txt"
 const historyTranscriptSummary = "Prior conversation history and tool progress."
 
 func BuildOpenAIHistoryTranscript(messages []any) string {
