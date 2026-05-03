@@ -1,4 +1,4 @@
-﻿package completionruntime
+package completionruntime
 
 import (
 	"context"
