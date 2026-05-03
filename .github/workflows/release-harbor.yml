@@ -129,9 +129,9 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            cloud.hrids.cn:7600/ds2api:${{ steps.next_version.outputs.new_tag }}
-            cloud.hrids.cn:7600/ds2api:${{ steps.next_version.outputs.new_version }}
-            cloud.hrids.cn:7600/ds2api:latest
+            cloud.hrids.cn:7600/ai_project/ds2api:${{ steps.next_version.outputs.new_tag }}
+            cloud.hrids.cn:7600/ai_project/ds2api:${{ steps.next_version.outputs.new_version }}
+            cloud.hrids.cn:7600/ai_project/ds2api:latest
           labels: |
             org.opencontainers.image.version=${{ steps.next_version.outputs.new_version }}
             org.opencontainers.image.revision=${{ github.sha }}
