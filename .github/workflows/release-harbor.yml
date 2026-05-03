@@ -97,11 +97,22 @@ jobs:
           git push origin HEAD:main "$NEW_TAG"
 
       # Docker 构建并推送到私有 Registry
+      - name: Configure Docker insecure registry
+        run: |
+          sudo mkdir -p /etc/docker
+          echo '{"insecure-registries": ["cloud.hrids.cn:7600"]}' | sudo tee /etc/docker/daemon.json
+          sudo systemctl restart docker
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+        with:
+          buildkitd-config-inline: |
+            [registry."cloud.hrids.cn:7600"]
+              http = true
+              insecure = true
 
       - name: Log in to Private Registry
         uses: docker/login-action@v3
