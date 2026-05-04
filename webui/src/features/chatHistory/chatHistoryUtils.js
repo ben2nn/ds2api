@@ -15,7 +15,7 @@ const CURRENT_INPUT_FILE_PROMPT = 'Continue from the latest state in the attache
 const LEGACY_CURRENT_INPUT_FILE_PROMPTS = new Set([
     'The current request and prior conversation context have already been provided. Answer the latest user request directly.',
 ])
-const HISTORY_TRANSCRIPT_TITLE = '# DS2API_HISTORY.txt'
+const HISTORY_TRANSCRIPT_TITLE = '# HRIDS_HISTORY.txt'
 const HISTORY_TRANSCRIPT_ENTRY_RE = /^===\s+\d+\.\s+([A-Z][A-Z_ -]*)\s+===\s*$/gm
 
 function isCurrentInputFilePrompt(value) {

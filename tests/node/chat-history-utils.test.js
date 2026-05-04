@@ -67,10 +67,10 @@ test('chat history transcript parser replaces current input file placeholder', a
   const item = {
     messages: [{
       role: 'user',
-      content: 'Continue from the latest state in the attached DS2API_HISTORY.txt context. Treat it as the current working state and answer the latest user request directly.',
+      content: 'Continue from the latest state in the attached HRIDS_HISTORY.txt context. Treat it as the current working state and answer the latest user request directly.',
     }],
     history_text: [
-      '# DS2API_HISTORY.txt',
+      '# HRIDS_HISTORY.txt',
       'Prior conversation history and tool progress.',
       '',
       '=== 1. SYSTEM ===',

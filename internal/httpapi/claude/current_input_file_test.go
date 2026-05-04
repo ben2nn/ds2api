@@ -152,7 +152,7 @@ func TestClaudeDirectAppliesCurrentInputFile(t *testing.T) {
 	if full.HistoryText != string(ds.uploads[0].Data) {
 		t.Fatalf("expected uploaded current input file to be persisted in history text")
 	}
-	if len(full.Messages) != 1 || !strings.Contains(full.Messages[0].Content, "Continue from the latest state in the attached DS2API_HISTORY.txt context.") {
+	if len(full.Messages) != 1 || !strings.Contains(full.Messages[0].Content, "Continue from the latest state in the attached HRIDS_HISTORY.txt context.") {
 		t.Fatalf("expected persisted message to match upstream continuation prompt, got %#v", full.Messages)
 	}
 }
